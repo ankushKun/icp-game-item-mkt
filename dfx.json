@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "react_backend": {
+      "candid": "src/react_backend/react_backend.did",
+      "package": "react_backend",
+      "type": "rust"
+    },
+    "react_frontend": {
+      "dependencies": [
+        "react_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/react_frontend/src/index.html"
+      },
+      "source": [
+        "src/react_frontend/assets",
+        "dist/react_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
